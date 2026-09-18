@@ -8,10 +8,14 @@
      (/favicon.ico, /apple-touch-icon.png), not inside a project page's folder, so a bookmark of
      hectorfsv.github.io/lounge/ fell back to a grey letter. The pages themselves live in their own
      repositories and are untouched: /lounge/ and /render-rig/. -->
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!-- 2026-09-18: the bookmark still drew a grey letter although every file here served 200 and decoded in real
+     WebKit. Safari caches the ANSWER, not the file, and a deleted bookmark does not clear that. These names are ones
+     it has never asked for; /favicon.ico and the rest stay on disk because that is the path Safari probes blind. -->
+<link rel="icon" href="/icon-v2.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/icon-32-v2.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icon-16-v2.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icon-180-v2.png">
+<link rel="manifest" href="/manifest.json">
 <meta name="apple-mobile-web-app-title" content="The Lounge">
 <meta name="theme-color" content="#0a0708">
 <meta http-equiv="refresh" content="0; url=/lounge/">

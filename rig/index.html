@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Render Rig</title>
+<!-- 2026-09-19: the Rig's Safari Favorites address on the Mac: https://hectorfsv.github.io./rig/ (note the dot after .io).
+     Safari on the Mac keeps ONE Favorites picture per website address: its Touch Icons Cache files each picture under
+     the bookmark's host alone (TouchIconCacheSettings.db, table cache_settings, keyed by host). The Lounge and the Rig
+     are both hectorfsv.github.io, so the Rig's tile showed the Lounge's Vader while its tab showed Gargantua.
+     "hectorfsv.github.io." is the same site to GitHub Pages (200, valid certificate) and a different address to that
+     cache. This page only carries the Rig's icons and sends him on to the real Rig, whose saved history and n8n access
+     belong to the address without the dot. -->
+<link rel="icon" href="/render-rig/icon-v2.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/render-rig/icon-32-v2.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/render-rig/icon-16-v2.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/render-rig/icon-180-v2.png">
+<meta name="apple-mobile-web-app-title" content="Render Rig">
+<meta name="theme-color" content="#0a0708">
+<script>
+  // Only a page someone is looking at moves on. Safari fetches a favorite's picture with a page nobody sees: that one
+  // stays here and reads the icons above, filed under this address. A tab opened in the background goes when shown.
+  (function(){
+    var to='https://hectorfsv.github.io/render-rig/';
+    function go(){ if(document.visibilityState==='visible') location.replace(to) }
+    go(); document.addEventListener('visibilitychange', go);
+  })();
+</script>
+<style>
+  :root{color-scheme:dark}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
+    background:#0a0708;color:#EDE6E3;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    text-align:center;padding:24px}
+  img{width:96px;height:96px;border:1px solid rgba(237,230,227,.18);display:block}
+  h1{font-size:22px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+  a{color:#E01B1B;font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:13px;text-decoration:none;
+    border:1px solid rgba(224,27,27,.5);padding:10px 18px}
+  a:hover{border-color:#E01B1B}
+</style>
+</head>
+<body>
+  <img src="/render-rig/icon-180-v2.png" alt="">
+  <h1>Render Rig</h1>
+  <a href="https://hectorfsv.github.io/render-rig/">Open</a>
+</body>
+</html>

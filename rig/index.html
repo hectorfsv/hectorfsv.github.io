@@ -20,10 +20,15 @@
 <script>
   // Only a page someone is looking at moves on. Safari fetches a favorite's picture with a page nobody sees: that one
   // stays here and reads the icons above, filed under this address. A tab opened in the background goes when shown.
+  // A page he IS looking at waits for its load (the icon below is the touch icon itself), so a visit also leaves
+  // Safari this address's icons before it moves on - about a quarter of a second.
   (function(){
-    var to='https://hectorfsv.github.io/render-rig/';
-    function go(){ if(document.visibilityState==='visible') location.replace(to) }
-    go(); document.addEventListener('visibilitychange', go);
+    var to='https://hectorfsv.github.io/render-rig/', gone=false;
+    function go(){
+      if(gone || document.visibilityState!=='visible' || document.readyState!=='complete') return;
+      gone=true; setTimeout(function(){ location.replace(to) }, 150);
+    }
+    document.addEventListener('visibilitychange', go); window.addEventListener('load', go);
   })();
 </script>
 <style>

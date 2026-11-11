@@ -12,6 +12,13 @@ icons the Lounge itself declared. A user-site repository is the only way to serv
 
 The pages themselves live in their own repositories and are untouched: `hectorfsv/lounge`, `hectorfsv/render-rig`.
 
+## `hephaestus/` — the home page and privacy policy Google's sign-in setup requires (2026-11-10)
+
+The Google Cloud project `hephaestus-514403` (YouTube Data, YouTube Analytics, Drive for Hector's own channel and
+files, used from his Mac) can only be set to **In production** once its Branding page names a home page and a privacy
+policy on an authorized domain. `hephaestus/index.html` and `hephaestus/privacy.html` are those two links. Keep the
+policy true: if the tool starts doing something new with Google data, change the page first.
+
 ## `rig/` — the Render Rig's Favorites address on the Mac (2026-09-19)
 
 Safari on the **Mac** keeps **one Favorites picture per website address**: its Touch Icons Cache
